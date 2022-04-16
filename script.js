@@ -1,7 +1,7 @@
 const nums = document.querySelectorAll(".nums span");
 const counter = document.querySelector(".counter");
 const finalMessage = document.querySelector(".final");
-const button = document.querySelector(".hidden");
+const button = document.querySelector(".button");
 const replay = document.querySelector("#replay");
 const backGround = document.querySelector(".no-background");
 
@@ -20,6 +20,7 @@ function resetDOM() {
 }
 
 function runAnimation() {
+  button.classList.add("hidden");
   nums.forEach((item, idx) => {
     const nextToLast = nums.length - 1;
 
@@ -36,6 +37,7 @@ function runAnimation() {
         backGround.classList.add("background");
         finalMessage.innerHTML =
           '<iframe width="560" height="315" src="https://www.youtube.com/embed/yQEondeGvKo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+        button.classList.add("button");
         button.classList.remove("hidden");
       }
     });
@@ -45,5 +47,6 @@ function runAnimation() {
 replay.addEventListener("click", () => {
   resetDOM();
   runAnimation();
+  button.classList.remove("button");
   button.classList.add("hidden");
 });
