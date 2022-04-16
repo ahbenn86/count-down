@@ -144,7 +144,7 @@ button:hover {
 
 @media only screen and (max-width: 900px) {
   iframe {
-    width: 100%; 
+    width: 100vw; 
   }
 
   .button {
