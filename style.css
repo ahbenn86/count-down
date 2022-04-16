@@ -141,3 +141,14 @@ button:hover {
     transform: translate(-50%, -50%) rotate(-120deg);
   }
 }
+
+@media only screen and (max-width: 900px) {
+  iframe {
+    width: 100%; 
+  }
+
+  .button {
+   visibility: hidden;
+    
+  }
+}
