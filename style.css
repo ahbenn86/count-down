@@ -144,11 +144,16 @@ button:hover {
 
 @media only screen and (max-width: 900px) {
   iframe {
-    width: 100vw; 
+    width: 100vw;
   }
 
   .button {
-   visibility: hidden;
-    
+    visibility: hidden;
+  }
+
+  .background {
+    background-size:cover;
+    background-repeat: no-repeat;
   }
 }
+
